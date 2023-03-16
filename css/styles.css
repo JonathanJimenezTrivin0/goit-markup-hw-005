@@ -401,8 +401,6 @@ ul {
   flex-basis: calc((100% - 60px) / 4);
 }
 .card-portfolio {
-  width: 370px;
-  height: 404px;
   background: #ffffff;
   border: 1px solid #eeeeee;
   position: relative;
@@ -415,37 +413,36 @@ ul {
   cursor: pointer;
 }
 
-.card-portfolio > img {
-  width: 100%;
-  height: auto;
-}
-
-.text-cards-portfolio {
-  width: 370px;
-  height: 294px;
-  background-color: rgba(33, 150, 243, 0.9);
-  position: absolute;
-  transition: 250ms;
-}
-
-.text-fondo-cards {
+.overlay {
   color: #ffffff;
-  font-family: 'Roboto';
-  font-weight: 400;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms ease-in;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 18px;
-  line-height: 28px;
-  margin-top: 63px;
-  margin-bottom: 63px;
-  margin-left: 24px;
-  margin-right: 24px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  padding: 63px 24px;
 }
 
-.card-portfolio:hover .text-cards-portfolio {
-  transform: translateY(-300px);
+.portfolio-links:hover .overlay,
+.portfolio-links:focus .overlay {
+  transform: translateY(0%);
 }
 
 .card-footer-portfolio {
-  padding: 20px;
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  cursor: pointer;
+}
+.card-footer-portfolio:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .catalogo-productos {
@@ -611,4 +608,27 @@ ul {
 .icon-text-footer {
   margin-top: 10px;
   margin-left: 140px;
+}
+
+/* Modal */
+.is-hidden {
+  display: none;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  width: 500px;
+  height: 500px;
+  background-color: aliceblue;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
