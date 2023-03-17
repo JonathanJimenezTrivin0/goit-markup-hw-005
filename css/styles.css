@@ -195,6 +195,8 @@ ul {
   cursor: pointer;
   display: flex;
   margin: 0 auto;
+  transition: background-color 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subtitulos {
@@ -323,6 +325,7 @@ ul {
   justify-content: flex-end;
   align-items: center;
   margin-left: auto;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contact-tel {
@@ -497,6 +500,7 @@ ul {
   width: 44px;
   height: 44px;
   cursor: pointer;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-contact {
@@ -521,6 +525,7 @@ ul {
   width: 170px;
   height: 81px;
   border: 2px solid #afb1b8;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-clientes-regulares {
@@ -618,6 +623,7 @@ ul {
   display: flex;
   gap: 10px;
   margin-top: 20px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-icon-footer > li {
@@ -656,8 +662,7 @@ ul {
   background-color: #ffffff;
   position: fixed;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms ease-in;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
