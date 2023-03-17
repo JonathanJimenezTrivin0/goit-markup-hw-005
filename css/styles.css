@@ -89,6 +89,8 @@ ul {
 
 .lista-contact {
   margin-right: 30px;
+  transition-duration: 250ms;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .lista-contact:hover {
@@ -107,12 +109,13 @@ ul {
   line-height: 16px;
   padding-bottom: 32px;
   padding-top: 32px;
+  transition-duration: 250ms;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link.current {
   color: #2196f3;
-  transition: transform 250ms ease-in;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 
 /* Linea subrayado header */
@@ -128,8 +131,6 @@ ul {
   height: 4px;
   background-color: #2196f3;
   border-radius: 2px;
-  transition: transform 250ms ease-in;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .onHover-link {
@@ -141,6 +142,8 @@ ul {
   padding-top: 32px;
   display: flex;
   align-items: center;
+  transition-duration: 250ms;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .onHover-link.current {
@@ -195,8 +198,6 @@ ul {
   cursor: pointer;
   display: flex;
   margin: 0 auto;
-  transition: background-color 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subtitulos {
@@ -300,6 +301,8 @@ ul {
   cursor: pointer;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+  transition-duration: 250ms;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .boton-Titulo-Principal-Portafolio:hover,
@@ -325,7 +328,6 @@ ul {
   justify-content: flex-end;
   align-items: center;
   margin-left: auto;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contact-tel {
@@ -445,8 +447,6 @@ ul {
   height: 100%;
   background: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition: transform 250ms ease-in;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 18px;
   line-height: 1.5;
   letter-spacing: 0.03em;
@@ -500,7 +500,7 @@ ul {
   width: 44px;
   height: 44px;
   cursor: pointer;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 
 .icon-contact {
@@ -525,7 +525,14 @@ ul {
   width: 170px;
   height: 81px;
   border: 2px solid #afb1b8;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #212121;
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-clientes-regulares {
@@ -535,15 +542,6 @@ ul {
 .icon-cregulares:hover {
   fill: #2196f3;
   border: 2px solid #2196f3;
-}
-
-.icon-cregulares {
-  color: #212121;
-  font-family: 'Roboto';
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
-  text-align: center;
 }
 
 .clientes-regulares {
@@ -591,6 +589,8 @@ ul {
   width: 44px;
   height: 44px;
   cursor: pointer;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icons-footer {
@@ -623,7 +623,6 @@ ul {
   display: flex;
   gap: 10px;
   margin-top: 20px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-icon-footer > li {
@@ -637,8 +636,10 @@ ul {
 }
 
 /* Modal */
-.is-hidden {
-  display: none;
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .backdrop {
@@ -647,6 +648,10 @@ ul {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden .modal {
