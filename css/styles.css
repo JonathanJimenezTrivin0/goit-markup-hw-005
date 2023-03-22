@@ -680,3 +680,7 @@ ul {
   border-radius: 50%;
   margin-top: 8px;
 }
+
+.icon-modal:hover {
+  fill: #2196f3;
+}
